@@ -1,4 +1,4 @@
-
+require_relative 'lib/song'
 
 def test(title, &b)
   begin
@@ -70,7 +70,7 @@ end
 
 test 'artists have songs' do
   artist = Artist.new
-  songs = (1..4).collect{|i| Song.new}
+  songs = 4.times{ Song.new }
   artist.songs = songs
 
   assert_equal artist.songs, songs
